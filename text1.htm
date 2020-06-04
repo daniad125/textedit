@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Текстовый редактор</title>
+<script>
+'use strict';
+function first()
+{
+
+}
+function getpar()
+{
+document.getElementById("text1").value+="<p></p>"
+}
+function gethead()
+{
+document.getElementById("text1").value+="<h1></h1>"
+
+}
+function getbold()
+{
+document.getElementById("text1").value+="<b></b>"
+
+}
+function getital()
+{
+document.getElementById("text1").value+="<i></i>"
+
+}
+function getunderl()
+{
+document.getElementById("text1").value+="<u></u>"
+
+}
+function print()
+{
+let alltext=document.getElementById("text1").value;
+document.getElementById("newtext").innerHTML=alltext
+}
+</script>
+</head>
+<body onLoad="first()">
+<form name="form1">
+Введите текст
+<br>
+<input type="button" onClick="gethead()" value="заголовок"><br>
+<input type="button" onClick="getpar()" value="новый абзац"><br>
+<input type="button" onClick="getbold()" value="Ж"><input type="button" onClick="getital()" value="К"><input type="button" onClick="getunderl()" value="Ч">
+<br>
+<textarea name="text1" id="text1" rows="50" cols="100"></textarea>
+<br>
+Загрузите изображение
+<input type="file" text="загр" >
+<br>
+<input type="button" value="Загрузите текст" onClick="print()">
+</form>
+<div id="newtext">Хаха</div>
+</body>
+</html>
